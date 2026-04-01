@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<!-- saved from url=(0042)https://meta-dashboard-balmon.lovable.app/ -->
-<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta Analytic Dashboard</title>
     <meta name="description" content="Dashboard Meta Analytic untuk pengelolaan data iklan dan statistik komprehensif.">
-    <meta name="author" content="Balmon">
+    
+    <!-- SPA routing fix for GitHub Pages -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === 'p' && l.search[2] === '=') {
+          var a = l.search.slice(1).split('&').map(function(s) { return s.replace(/~and~/g, '&') })
+          for (var i = 0; i < a.length; i++) {
+            if (a[i].indexOf('p=') === 0) {
+              var p = a[i].slice(2);
+              var q = '';
+              a.splice(i, 1);
+              if (a.length > 0) { q = '?' + a.join('&'); }
+              window.history.replaceState(null, null,
+                l.pathname.slice(0, -1) + p + q + l.hash
+              );
+              break;
+            }
+          }
+        }
+      }(window.location))
+    </script>
 
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/203fda39-a7ef-4683-a9fb-10e7ad9812d8/id-preview-7babe82e--7769e1c0-8de0-4eec-a011-4cd79b25a666.lovable.app-1774585321643.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Balmon">
-    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/203fda39-a7ef-4683-a9fb-10e7ad9812d8/id-preview-7babe82e--7769e1c0-8de0-4eec-a011-4cd79b25a666.lovable.app-1774585321643.png">
-    <meta property="og:title" content="Meta Analytic Dashboard">
-  <meta name="twitter:title" content="Meta Analytic Dashboard">
-  <meta property="og:description" content="Dashboard Meta Analytic untuk pengelolaan data iklan dan statistik komprehensif.">
-  <meta name="twitter:description" content="Dashboard Meta Analytic untuk pengelolaan data iklan dan statistik komprehensif.">
-  <script type="module" crossorigin="" src="./assets/index-FQhNxiuB.js"></script>
-  <link rel="stylesheet" crossorigin="" href="./assets/index-Cabvdc3w.css">
-
+    <script type="module" crossorigin="" src="./assets/index-FQhNxiuB.js"></script>
+    <link rel="stylesheet" crossorigin="" href="./assets/index-Cabvdc3w.css">
+    <base href="/meta-analytic/">
 </head>
 <body>
     <div id="root"></div>
